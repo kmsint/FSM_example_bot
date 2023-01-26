@@ -220,7 +220,6 @@ async def process_wish_news_press(callback: CallbackQuery, state: FSMContext):
             data['wish_news'] = False
     # Добавляем в "базу данных" анкету пользователя
     # по ключу id пользователя
-    print(await state.get_data()['gender'])
     user_dict[callback.from_user.id] = await state.get_data()
     # Завершаем машину состояний
     await state.finish()
